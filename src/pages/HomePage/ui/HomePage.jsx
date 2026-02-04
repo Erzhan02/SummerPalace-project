@@ -1,7 +1,6 @@
-import React from 'react';
-import Footer from '../../../components/Footer/ui/Footer';
-import Header from '../../../components/Header/ui/Header';
-import Main from '../../../components/Main/ui/Main';
+import Footer from '@widgets/Footer/ui/Footer';
+import Header from '@widgets/Header/ui/Header';
+import Main from './Main/ui/Main';
 
 const HomePage = () => {
 	return (

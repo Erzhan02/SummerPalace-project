@@ -1,0 +1,10 @@
+.burgerWrapper {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.burgerWrapper:active {
+	background-color: #ccc;
+}

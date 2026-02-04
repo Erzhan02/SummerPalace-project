@@ -1,0 +1,21 @@
+.container {
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 60px;
+}
+
+.nav {
+	display: flex;
+	gap: 30px;
+}
+
+.logo {
+	width: 160px;
+	height: 88px;
+}

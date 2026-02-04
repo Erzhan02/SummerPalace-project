@@ -1,4 +1,4 @@
-import React from 'react';
+import HomePage from '@pages/HomePage/ui/HomePage';
 import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
