@@ -1,4 +1,4 @@
-import AppButton from '@shared/AppButton/ui/AppButton';
+import AppButton from '@shared/ui/AppButton/ui/AppButton';
 import classes from './BurgerButton.module.scss';
 
 const BurgerButton = () => {

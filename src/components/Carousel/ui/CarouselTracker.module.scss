@@ -1,0 +1,33 @@
+.carousel-tracker {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 0;
+	gap: 10px;
+
+	&__button {
+		border: none;
+		background: none;
+		cursor: pointer;
+
+		&--disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__line {
+		width: 20px;
+		height: 1px;
+		background-color: #e5e5e5;
+
+		&--current {
+			background-color: black;
+		}
+	}
+}

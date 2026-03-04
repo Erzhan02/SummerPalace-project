@@ -2,9 +2,11 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import classes from './AppLink.module.scss';
 
-const AppLink = ({ children, className }) => {
+const AppLink = ({ children, className, to }) => {
 	return (
-		<Link className={clsx(classes.defaultClass, className)}>{children}</Link>
+		<Link to={to} className={clsx(classes.defaultClass, className)}>
+			{children}
+		</Link>
 	);
 };
 
