@@ -1,7 +1,8 @@
+import CastleIcon from '@shared/ui/assets/icons/castleIcon';
 import classes from './AboutRestaurant.module.scss';
+import FeatureCard from './FeatureCard';
 import info from './info';
-
-const firstIcon = info.features[0].icon;
+import VideoBlock from './VideoBlock';
 
 const AboutRestaurant = () => {
 	return (
@@ -12,15 +13,14 @@ const AboutRestaurant = () => {
 						<h2 className={classes['about-restaurant__header-title']}>
 							{info.heading}
 						</h2>
-						<img
-							className={classes['about-restaurant__header-icon']}
-							src={firstIcon}
-							alt=''
-						/>
+						<CastleIcon className={classes['about-restaurant__header-icon']} />
 						<p className={classes['about-restaurant__header-text']}>
 							{info.name}
 						</p>
 					</div>
+				</div>
+				<div className={classes['about-restaurant__video']}>
+					<VideoBlock />
 				</div>
 				<div className={classes['about-restaurant__intro']}>
 					<div className={classes['about-restaurant__intro-content']}>
@@ -34,25 +34,8 @@ const AboutRestaurant = () => {
 						</p>
 					</div>
 					<div className={classes['about-restaurant__features']}>
-						{info.features.map(feature => (
-							<div
-								key={feature.id}
-								className={classes['about-restaurant__feature']}
-							>
-								<div className={classes['about-restaurant__feature-header']}>
-									<img
-										src={feature.icon}
-										alt=''
-										className={classes['about-restaurant__feature-icon']}
-									/>
-									<h3 className={classes['about-restaurant__feature-title']}>
-										{feature.title}
-									</h3>
-								</div>
-								<p className={classes['about-restaurant__feature-text']}>
-									{feature.text}
-								</p>
-							</div>
+						{info.features?.map(feature => (
+							<FeatureCard key={feature.title} {...feature} />
 						))}
 					</div>
 				</div>

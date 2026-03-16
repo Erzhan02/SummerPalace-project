@@ -1,10 +1,12 @@
+@use '@abstracts' as *;
+
 .about-restaurant {
 	padding: 90px 0;
 	background: linear-gradient(
 		to bottom,
 		#fff 0%,
-		#fff 30%,
-		#f9f7f7 30%,
+		#fff 38%,
+		#f9f7f7 38%,
 		#f9f7f7 100%
 	);
 
@@ -44,10 +46,24 @@
 		}
 	}
 
+	&__video {
+		padding: 60px 0 90px;
+	}
+
 	&__intro {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 30px;
+
+		@include down(tablet) {
+			padding: 90px;
+		}
+
+		@include down(mobile) {
+			padding: 30px;
+			text-align: justify;
+			grid-template-columns: repeat(1, 1fr);
+		}
 
 		&-content {
 			display: flex;
@@ -67,33 +83,9 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 30px;
-	}
 
-	&__feature {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-
-		&-header {
-			display: flex;
-			align-items: center;
-			gap: 20px;
+		@include down(mobile) {
+			grid-template-columns: repeat(1, 1fr);
 		}
-	}
-
-	&__feature-icon {
-		width: 40px;
-		height: 40px;
-		object-fit: contain;
-	}
-
-	&__feature-title {
-		text-transform: uppercase;
-		font-size: 16px;
-		font-weight: 300;
-	}
-
-	&__feature-text {
-		font-weight: 300;
 	}
 }

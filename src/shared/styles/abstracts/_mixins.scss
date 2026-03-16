@@ -1,0 +1,114 @@
+@use 'sass:math';
+@use 'functions' as *;
+
+/* ================================
+   Typography / Типографика (работа с текстом и шрифтами)
+================================ */
+
+@mixin fluid-text($min: 16, $max: 48) {
+	font-size: fluid($min, $max);
+}
+
+/* ================================
+   Visibility / Видимость (показ/скрытие элементов)
+================================ */
+
+@mixin hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@mixin show {
+	opacity: 1;
+	visibility: visible;
+}
+
+@mixin visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;
+}
+
+/* ================================
+   Flex utilities / Flex-утилиты (вспомогательные миксины для Flexbox)
+================================ */
+
+@mixin flex-center($inline: false) {
+	@if $inline {
+		display: inline-flex;
+	} @else {
+		display: flex;
+	}
+
+	justify-content: center;
+	align-items: center;
+}
+
+/* ================================
+   Position helpers / Помощники позиционирования
+================================ */
+
+@mixin abs-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+@mixin abs-x($position: absolute) {
+	position: $position;
+	left: 50%;
+	translate: -50%;
+}
+
+@mixin abs-y($position: absolute) {
+	position: $position;
+	top: 50%;
+	translate: 0 -50%;
+}
+
+/* ================================
+   Size utilities / Утилиты размеров
+================================ */
+
+@mixin square($size) {
+	width: $size;
+	height: $size;
+}
+
+/* ================================
+   Decorative utilities / Декоративные утилиты
+================================ */
+
+@mixin full-vw-centered-line(
+	$property: top,
+	$left: 50%,
+	$right: auto,
+	$translate: -50%
+) {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+
+		#{$property}: 0;
+
+		left: $left;
+		right: $right;
+
+		translate: $translate;
+
+		width: 100vw;
+		height: rem(1);
+
+		background-color: var(--color-black);
+	}
+}

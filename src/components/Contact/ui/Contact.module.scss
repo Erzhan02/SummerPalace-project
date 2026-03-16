@@ -1,0 +1,41 @@
+@use '@abstracts' as *;
+
+.contact {
+	padding: 90px 0;
+
+	@include down(tablet) {
+		padding: 90px;
+	}
+
+	@include down(mobile) {
+		padding: 5px;
+	}
+
+	&__container {
+		max-width: 1110px;
+		margin: 0 auto;
+		display: flex;
+		gap: 30px;
+
+		@include down(tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		h2 {
+			font-weight: 300;
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+		p {
+			font-weight: 300;
+			font-size: 14px;
+			padding: 40px 0 60px;
+		}
+
+		@include down(laptop) {
+			padding: 0 60px;
+		}
+	}
+}

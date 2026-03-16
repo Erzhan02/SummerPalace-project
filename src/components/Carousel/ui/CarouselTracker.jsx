@@ -1,5 +1,5 @@
-import ChevronLeft from '@shared/ui/assets/icons/chevron-left';
-import ChevronRight from '@shared/ui/assets/icons/chevron-right';
+import ChevronLeft from '@shared/ui/assets/icons/ChevronLeftIcon';
+import ChevronRight from '@shared/ui/assets/icons/ChevronRightIcon';
 import classes from './CarouselTracker.module.scss';
 
 const CarouselTracker = ({

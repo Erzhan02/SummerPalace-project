@@ -1,5 +1,8 @@
-import { icon1, icon2, icon3, icon4 } from '@shared/ui/assets/icons';
-import { logo } from '@shared/ui/assets/images';
+import { logo } from '@images';
+import BulbIcon from '@shared/ui/assets/icons/bulbIcon';
+import CastleIcon from '@shared/ui/assets/icons/CastleIcon';
+import CogsIcon from '@shared/ui/assets/icons/cogsIcon';
+import TableIcon from '@shared/ui/assets/icons/tableIcon';
 
 const info = {
 	heading: 'О ресторане',
@@ -18,26 +21,26 @@ const info = {
 			text: `Сочетание классических интерьеров и современных технических
 							возможностей выгодно отличают Летний Дворец от большинства других
 							исторических площадок города.`,
-			icon: icon1,
+			icon: CastleIcon,
 		},
 		{
 			title: 'Интерьеры',
 			text: `Изысканное внутреннее убранство Летнего Дворца — тонко выполненная
 							стилизация с использованием традиционных технологий и материалов —
 							мрамора, бронзового литья.`,
-			icon: icon2,
+			icon: TableIcon,
 		},
 		{
 			title: 'Технологии',
 			text: `Возможности «Летнего Дворца» практически безграничны с точки
 							зрения проведения мероприятий самого разного формата и масштаба.`,
-			icon: icon3,
+			icon: BulbIcon,
 		},
 		{
 			title: 'Оборудование',
 			text: `Установлен комплект самого современного звукового оборудования,
 							который приятно удивит даже знатока качественного звука.`,
-			icon: icon4,
+			icon: CogsIcon,
 		},
 	],
 };

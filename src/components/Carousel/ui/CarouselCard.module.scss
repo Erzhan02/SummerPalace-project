@@ -1,9 +1,19 @@
+@use '@abstracts' as *;
+
 .card {
 	height: 650px;
 	position: relative;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	@include down(tablet) {
+		height: 325px;
+	}
+
+	@include down(mobile) {
+		height: 200px;
+	}
 
 	&__overlay {
 		position: absolute;

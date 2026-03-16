@@ -1,0 +1,44 @@
+.instagram {
+	padding: 30px 0 0;
+
+	background-color: #f9f7f7;
+	&__container {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 90px 0;
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	&__icon {
+		margin: 25px 0 10px;
+	}
+
+	&__subtitle {
+		font-weight: 300;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+
+	&__gallery {
+		display: flex;
+	}
+
+	&__image {
+		width: calc(100% / 6);
+		object-fit: contain;
+	}
+}

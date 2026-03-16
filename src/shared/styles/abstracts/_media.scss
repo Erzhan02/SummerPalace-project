@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use 'functions' as *;
+
+$breakpoints: (
+	mobile-s: 480.98,
+	mobile: 767.98,
+	tablet: 1023.98,
+	laptop: 1440.98,
+	desktop: 1920,
+);
+
+@function bp($name) {
+	@if map.has-key($breakpoints, $name) {
+		@return rem(map.get($breakpoints, $name));
+	}
+
+	@error "Breakpoint #{$name} не существует";
+}
+
+@mixin up($name) {
+	@media (min-width: bp($name)) {
+		@content;
+	}
+}
+
+@mixin down($name) {
+	@media (max-width: bp($name)) {
+		@content;
+	}
+}
+
+@mixin between($from, $to) {
+	@media (min-width: bp($from)) and (max-width: bp($to)) {
+		@content;
+	}
+}

@@ -1,3 +1,5 @@
+@use '@abstracts' as *;
+
 .carousel {
 	&__container {
 		max-width: 1800px;
@@ -16,5 +18,13 @@
 	&__slide {
 		flex: 0 0 33.3333%;
 		padding: 0 15px;
+
+		@include down(tablet) {
+			flex: 0 0 50%;
+		}
+
+		@include down(mobile) {
+			flex: 0 0 100%;
+		}
 	}
 }

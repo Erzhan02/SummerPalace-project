@@ -1,0 +1,54 @@
+@use '@abstracts' as *;
+
+.contact-form {
+	@include down(laptop) {
+		padding: 0 60px;
+	}
+
+	@include down(tablet) {
+		padding: 0 60px;
+	}
+
+	&__name,
+	&__mail {
+		height: 45px;
+		width: 100%;
+		border: none;
+		border-bottom: 0.5px solid #d0d0d0;
+		outline-color: #d0d0d0;
+		&::placeholder {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+		}
+	}
+
+	&__message {
+		height: 200px;
+		width: 100%;
+		border: 0.5px solid #d0d0d0;
+		outline-color: #d0d0d0;
+		padding: 15px 20px;
+		resize: none;
+		&::placeholder {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+		}
+		margin: 35px 0;
+	}
+
+	&__button {
+		color: #d1a954;
+		background-color: white;
+		border: 1px solid #d1a954;
+		padding: 12px 36px;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		&:active {
+			color: white;
+			background-color: #d1a954;
+			transition: 0.7s;
+		}
+	}
+}
