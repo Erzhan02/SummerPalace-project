@@ -2,13 +2,11 @@ import AppLink from '@shared/ui/AppLink/ui/AppLink';
 import { logo } from '@shared/ui/assets/images';
 import BurgerButton from '@shared/ui/BurgerButton/ui/BurgerButton';
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import classes from './Header.module.scss';
-import navLinks from './navLinks';
+import NavList from './NavList';
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
-	const location = useLocation();
 
 	return (
 		<header className={classes.header}>
@@ -18,19 +16,10 @@ const Header = () => {
 				</AppLink>
 
 				<nav className={classes.header__nav}>
-					{navLinks.map(link => (
-						<AppLink
-							key={link.to}
-							to={link.to}
-							className={
-								location.pathname === link.to
-									? `${classes.header__link} ${classes['header__link--active']}`
-									: classes.header__link
-							}
-						>
-							{link.label}
-						</AppLink>
-					))}
+					<NavList
+						linkClass={classes.header__link}
+						activeLinkClass={classes['header__link--active']}
+					/>
 				</nav>
 
 				<BurgerButton
@@ -57,19 +46,10 @@ const Header = () => {
 				/>
 
 				<nav className={classes.header__sidebarNav}>
-					{navLinks.map(link => (
-						<AppLink
-							key={link.to}
-							to={link.to}
-							className={
-								location.pathname === link.to
-									? `${classes.header__sidebarLink} ${classes['header__sidebarLink--active']}`
-									: classes.header__sidebarLink
-							}
-						>
-							{link.label}
-						</AppLink>
-					))}
+					<NavList
+						linkClass={classes.header__sidebarLink}
+						activeLinkClass={classes['header__sidebarLink--active']}
+					/>
 				</nav>
 			</aside>
 		</header>

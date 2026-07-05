@@ -1,4 +1,4 @@
-import OurInstagram from '@/components/OurInstagram/ui/OurInstagram';
+import OurInstagram from '@components/OurInstagram/ui/OurInstagram';
 import AboutMore from '@components/AboutMore/ui/AboutMore';
 import AboutRestaurant from '@components/AboutRestaurant/ui/AboutRestaurant';
 import Carousel from '@components/Carousel/ui/Carousel';

@@ -1,5 +1,5 @@
-import { image1, image4 } from '@/shared/ui/assets/images';
 import CastleIcon from '@shared/ui/assets/icons/CastleIcon';
+import { image1, image4 } from '@shared/ui/assets/images';
 import classes from './OurInstagram.module.scss';
 
 const OurInstagram = () => {
